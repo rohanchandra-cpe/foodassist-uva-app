@@ -61,12 +61,12 @@ export default class NewUser extends Component {
 		}
 		else{
 			const newUser = {
-				org_name = this.state.org_name,
-				contact_name = this.state.contact_name,
-				contact_email = this.state.contact_email,
-				contact_phone_number = this.state.contact_phone_number,
-				contact_password = this.state.contact_password,
-				contact_reenter_password = this.state.contact_reenter_password
+				org_name: this.state.org_name,
+				contact_name: this.state.contact_name,
+				contact_email: this.state.contact_email,
+				contact_phone_number: this.state.contact_phone_number,
+				contact_password: this.state.contact_password,
+				contact_reenter_password: this.state.contact_reenter_password
 			};
 			//Then we would axios post
 			this.setState = ({
@@ -131,4 +131,3 @@ export default class NewUser extends Component {
 	}
 }
 
-export default App;

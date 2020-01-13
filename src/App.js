@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import NewUser from "./components/new-user.component";
 
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<Router>
+			<div class = "container">
 				<div class="jumbotron">
 					<h1 class="display-3 text-center text-primary">New User Registration</h1>
 				</div>
@@ -47,7 +51,9 @@ class App extends Component {
 					</div>
 				</form>
 				<button type="button" class="btn btn-outline-primary" type="submit">Register</button>
+				<Route path="/adduser" component={NewUser} />
 			</div>
+			</Router>
 		);
 	}
 }
