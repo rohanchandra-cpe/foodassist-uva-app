@@ -129,7 +129,10 @@ export default class NewUser extends Component {
 						</div>
 					</div>
 				</form>
-				<button type="button" class="btn btn-outline-primary" type="submit">Register</button>
+				<div className = "form-group">
+					<input type="submit" value = "create_new_user" className = "btn btn-primary"/>
+				</div>
+				//<button type="button" class="btn btn-outline-primary" type="submit">Register</button>
 			</div>
 		);
 	}
