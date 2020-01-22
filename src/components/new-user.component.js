@@ -58,6 +58,7 @@ export default class NewUser extends Component {
 		if(!(this.state.contact_password.equals(this.state.contact_reenter_password))){
 			//Error! Make sure they equal. Maybe some nice bootstrap stuff
 			//I could also do a length check
+			break;
 		}
 		else{
 			const newUser = {
@@ -68,7 +69,10 @@ export default class NewUser extends Component {
 				contact_password: this.state.contact_password,
 				contact_reenter_password: this.state.contact_reenter_password
 			};
-			//Then we would axios post
+			
+			axios.post('http://localhost:4000/foodassist/adduser', newUser)
+				.then(res => console.log(res.data));
+
 			this.setState = ({
 				org_name: '',
 				contact_name: '',
